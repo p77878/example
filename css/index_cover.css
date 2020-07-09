@@ -1,0 +1,43 @@
+ .index-cover{
+  background: url("../img/860x394.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px; 
+  display: table;
+  width: 100%;
+}
+
+.index-cover .index-container{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.index-cover .index-container ._title{
+  margin: 0;
+  margin-bottom: 56px;
+  font-size: 72px;
+  color: #F8FAFF;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.index-cover .index-container .btn{
+  padding: 8px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  margin: 0 8px;
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.24), 0 1.5px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.index-cover .index-container .btn.btn_light{
+  background-color: #AAABD3;
+  color: white;
+}
+
+.index-cover .index-container .btn.btn_dark{
+  background-color: #353866;
+  color: white;
+}
