@@ -1,3 +1,14 @@
+#si{
+  /* position: fixed; */
+  font-size: 18px;
+  color: white;
+    float: left;
+    width: 50%;
+  height: 64px;
+  margin: 0 8px;
+  padding: 0 8px;
+  line-height: 64px;
+}
 .nav{
   height: 64px; 
   width:100%; 
@@ -49,6 +60,7 @@
   display: inline-block;
   width: 100%;
 }
+
 
 @media (min-width: 992px){
   .nav .nav-button{

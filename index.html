@@ -4,8 +4,8 @@
     <title>For example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/notosanstc.css">
-    <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/earlyaccess/notosanstc.css"> -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Macondo" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
@@ -22,12 +22,13 @@
   <body>
     <header>
       <nav class="nav">
+        <span id="si"></span>
         <ul class="nav-list">
           <li class="nav-list-item"><a href="https://www.facebook.com">Facebook</a></li>
           <li class="nav-list-item"><a href="https://www.google.com">Google</a></li>
           <li class="nav-list-item"><a href="https://www.vegbao.com">菜包網</a></li>
         </ul>
-        <button type="button" class="nav-button">
+        <button id="btnLogin" type="button" class="nav-button">
           <i class="fa fa-bars" aria-hidden="true"></i>
         </button>
       </nav>
@@ -40,13 +41,13 @@
             <div class="index-cover">
               <div class="index-container">
                 <h1 class="_title">軍用商行</h1>
-                <div>
-                  <button type="button" class="btn btn_light">
+                <div id="div_login">
+                  <button id="loginBtn" type="button" class="btn btn_light" onclick="javascript:location.href='login/login.html'">
                     登入
                   </button>
-                   <button type="button" class="btn btn_dark">
+                   <!-- <button type="button" class="btn btn_dark">
                      註冊
-                  </button>
+                  </button> -->
                 </div>
               </div>
             </div>
@@ -115,7 +116,7 @@
       </section>
       <section>
         <!-- video player -->
-        <div class="container">
+        <!-- <div class="container">
           <div class="row">
             <div class="col-phone-100 col-tablet-67">
               <div class="video-player">
@@ -124,21 +125,21 @@
                 </div>
               </div>
             </div>
-            <div class="col-phone-100 col-tablet-33">
+            <!-- <div class="col-phone-100 col-tablet-33">
               <div class="video-list-container mdl-shadow--2dp">
                 <div class="ratio_8_9">
                   <ul class="ratio_content video-list">
                     <li class="_video" data-video="1qc5bAgZ0uY">1. STRONGEST Soldier in Army Gym</li>
-                    <li class="_video" data-video="ip-np8gtjM8">2. Funniest Military Fails  </li>
-                    <li class="_video" data-video="ab0Ch_ytiBQ">3. US Army Soldier Vs US Marine </li>
+                    <li class="_video" data-video="0YNaxWMKArA">2. Funniest Military Fails  </li>
+                    <li class="_video" data-video="B7TVdkHObVg">3. US Army Soldier Vs US Marine </li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
-      <section class="remove_padding">
+      <section class="remove_padding"> -->
         <!-- image links -->
         <div class="container">
           <div class="row">
@@ -227,6 +228,25 @@
           $(".nav-list").slideToggle(400);
         })
       })
+
+      var user = getCookieByName("user");
+      console.log(user);
+      if (user!= undefined || user!= null){
+        var div_login = document.getElementById("div_login");
+        console.log(div_login);
+        div_login.remove();
+        document.getElementById("si").innerHTML="歡迎您，"+user;
+      }
+
+
+function getCookieByName(name) {
+    var arr = document.cookie.match(new RegExp("(^| )"+name+"=([^;]*)(;|$)"));
+     if(arr != null){
+    	 return unescape(arr[2]); 
+     }else{
+    	 return null;
+     }
+}
     </script>
   </body>
 </html>
